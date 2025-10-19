@@ -165,7 +165,7 @@
   </script>
   
   <style>
-    /* 自定义样式用于图片左对齐，文字右对齐 */
+  
     .image-left-content-right {
       display: flex;
       align-items: center;
@@ -182,7 +182,7 @@
       flex: 1;
     }
     
-    /* 响应式设计 */
+    
     @media (max-width: 768px) {
       .image-left-content-right {
         flex-direction: column;
@@ -194,10 +194,10 @@
         max-width: 100%;
       }
     }
-    
-    /* 缩小PNG图片尺寸 */
+   
     .digest-figure img,
-    .trajectory-figure img {
+    .trajectory-figure img,
+    .force-figure img {
       max-width: 400px;
       width: 100%;
       height: auto;
@@ -208,6 +208,24 @@
       max-width: 100%;
       width: 100%;
       height: auto;
+    }
+    
+    /* 上下布局样式 */
+    .image-top-content-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .image-top-content-bottom .image-container {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .image-top-content-bottom .content-container {
+      width: 100%;
     }
   </style>
 </head>
@@ -307,7 +325,7 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">System Overview</h2>
+      <h2 class="title is-3">Unified hand-arm Robot System Overview</h2>
       <div class="image-left-content-right">
         <div class="image-container">
           <div class="digest-figure">
@@ -317,12 +335,8 @@
         <div class="content-container">
           <div class="content">
             <p class="has-text-justified">
-              The complete unified hand-arm robot system integrates a Franka Panda arm with Bowden cable transmission, 
+              The complete unified hand-arm robot system integrates a Franka Panda arm, and a hand with Bowden cable transmission, 
               showcasing the mechanical design and force transmission architecture that enables dexterous manipulation.
-            </p>
-            <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem; line-height: 1.4;">
-              Complete system architecture of the unified hand-arm robot with Bowden cable transmission, 
-              illustrating the integration between the robotic arm and tendon-driven actuation system.
             </p>
           </div>
         </div>
@@ -332,47 +346,24 @@
 </section>
 <!-- End Digest Picture -->
     
-<!-- Target 21 GIF Section -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Target Trajectory Visualization</h2>
-      <div class="image-left-content-right">
-        <div class="image-container">
-          <div class="gif-figure">
-            <img src="static/video/target_21.gif" alt="Target trajectory execution on Franka robot system" loading="lazy">
-          </div>
-        </div>
-        <div class="content-container">
-          <div class="content">
-            <p class="has-text-justified">
-              The animation below demonstrates the target trajectory execution on the Franka robot system. This visualization shows the coordinated motion of the robotic arm while maintaining stable force transmission through the Bowden cable system.
-            </p>
-            <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem;">
-              Real-time execution of target trajectory 21 on the Franka robot arm with Bowden cable transmission system. 
-              The optimized motion ensures minimal force fluctuations while accurately following the desired path.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Target 21 GIF Section -->
 
-<!-- 10 Trajectories Section -->
+
+<!-- Results Section -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Trajectory Analysis</h2>
-      <div class="image-left-content-right">
+      <h2 class="title is-3">Results</h2>
+      
+      <!-- Trajectory Analysis -->
+      <div class="image-top-content-bottom" style="margin-bottom: 3rem;">
         <div class="image-container">
           <div class="trajectory-figure">
-            <img src="static/png/10_traj.png" alt="Comparison of 10 generated, optimized and executed trajectories" loading="lazy">
+            <img src="static/png/10_traj.png" alt="Comparison of 10 generated, optimized, and executed trajectories" loading="lazy">
           </div>
         </div>
         <div class="content-container">
           <div class="content">
+            <h3 class="title is-4">Trajectory Analysis</h3>
             <p class="has-text-justified">
               We generated 10 different trajectories and optimized them using our nonlinear optimization framework. The figure below shows the comparison between generated trajectories, optimized trajectories, and the actual trajectories executed by the Franka robot.
             </p>
@@ -383,12 +374,56 @@
           </div>
         </div>
       </div>
+
+      <!-- Force Analysis -->
+      <div class="image-top-content-bottom">
+        <div class="image-container">
+          <div class="force-figure">
+            <img src="static/png/force_all.png" alt="Force transmission analysis across 10 trajectories" loading="lazy">
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <h3 class="title is-4">Force Transmission Analysis</h3>
+            <p class="has-text-justified">
+              This figure presents the comprehensive force transmission analysis across 10 optimized trajectories. The force data demonstrates how our optimization framework effectively minimizes force fluctuations in the Bowden cable system while maintaining precise trajectory tracking performance.
+            </p>
+            <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem;">
+              Force transmission characteristics across 10 trajectories, showing the effectiveness of our optimization approach in stabilizing cable forces during complex manipulation tasks. The results validate our nonlinear optimization framework's ability to maintain consistent force transmission regardless of arm configuration changes.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- End 10 Trajectories Section -->
+<!-- End Results Section -->
 
-
+<!-- Target 21 GIF Section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Optimized Trajectory Visualization</h2>
+      <div class="image-left-content-right">
+        <div class="image-container">
+          <div class="gif-figure">
+            <img src="static/video/target_21.gif" alt=" Optimized execution on Franka robot system" loading="lazy">
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="content">
+            <p class="has-text-justified">
+              The animation below demonstrates the optimized trajectory execution on the Franka robot system. This visualization shows the coordinated motion of the robotic arm while maintaining stable force transmission through the Bowden cable system.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Target 21 GIF Section -->
+    
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
