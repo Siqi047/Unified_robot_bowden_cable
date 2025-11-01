@@ -118,6 +118,22 @@
           "@type": "Organization",
           "name": "Technical University of Munich"
         }
+      },
+      {
+        "@type": "Person",
+        "name": "Amartya Ganguly",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Technical University of Munich"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Sami Haddadin",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Mohamed Bin Zayed University of Artificial Intelligence"
+        }
       }
     ],
     "datePublished": "2024-01-01",
@@ -129,7 +145,7 @@
     "image": "https://siqi047.github.io/Unified_robot_bowden_cable/static/images/social_preview.png",
     "keywords": ["robotics", "motion optimization", "hand-arm systems", "Bowden cable", "nonlinear control"],
     "abstract": "Unified hand–arm robot systems present ongoing challenges, especially when applying tendon-driven five-finger systems using Bowden cables. We address optimization-based motion synthesis for hand–arm robot systems by modeling and optimizing a single Bowden-cable transmission mounted on a Franka Emika Panda arm and its end effector. The shape of the Bowden cable, which varies with the robot arm's configuration, influences the characteristics of force transmission and thereby affects the grasping force. Our trajectory optimization proposes a nonlinear optimization framework to minimize the force change of a Bowden cable while ensuring robot arm trajectory tracking. Although we instantiated this project with a single cable, the formulation generalizes to unified hand-arm robot control, where a multi-tendon-driven, multi-finger hand is actuated via Bowden transmissions. The results provide an optimization foundation for more dexterous hand-arm systems, as well as coordinated manipulation with optimization-based design of unified hand–arm robotic systems.",
-    "citation": "@article{chen2024optimization,\n  title={Optimization-Based Motion Synthesis for Unified Manipulation in Robot Hand-Arm Systems with Bowden Cable Transmission},\n  author={Chen, Lingyun and Yuan, Siqi and Li, Junnan},\n  journal={IFAC Conference},\n  year={2024},\n  url={https://siqi047.github.io/Unified_robot_bowden_cable/}\n}",
+    "citation": "@article{chen2024optimization,\n  title={Optimization-Based Motion Synthesis for Unified Manipulation in Robot Hand-Arm Systems with Bowden Cable Transmission},\n  author={Chen, Lingyun and Yuan, Siqi and Li, Junnan and Ganguly, Amartya and Haddadin, Sami},\n  journal={IFAC Conference},\n  year={2024},\n  url={https://siqi047.github.io/Unified_robot_bowden_cable/}\n}",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -320,34 +336,19 @@
       transform: translateY(-2px);
     }
     
-    /* BibTeX样式 */
-    .bibtex-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
+    /* 作者和机构信息样式 */
+    .publication-institutions {
+      margin-top: 1rem;
+      line-height: 1.6;
     }
     
-    .copy-bibtex-btn {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
+    .institution-block {
+      margin-bottom: 0.5rem;
     }
     
-    .copy-bibtex-btn:hover {
-      background-color: #1d4ed8;
-    }
-    
-    #bibtex-code {
-      background-color: #f5f5f5;
-      padding: 1.5rem;
-      border-radius: 4px;
-      overflow-x: auto;
-      font-family: 'Courier New', monospace;
+    .institution-block sup {
+      font-size: 0.7em;
+      vertical-align: super;
     }
   </style>
 </head>
@@ -365,17 +366,39 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Optimization-Based Motion Synthesis for Unified Manipulation in Robot Hand-Arm Systems with Bowden Cable Transmission</h1>
+            
+            <!-- 更新作者信息 -->
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://siqi047.github.io/" target="_blank">Lingyun Chen</a></sup>,</span>
-                <span class="author-block">
-                  <a href="https://siqi047.github.io/" target="_blank">Siqi Yuan</a></sup>,</span>
-                  <span class="author-block">
-                    <a href="https://siqi047.github.io/" target="_blank">Junnan Li</a>
-                  </span>
+                <a href="https://siqi047.github.io/" target="_blank">Lingyun Chen</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://siqi047.github.io/" target="_blank">Siqi Yuan</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://siqi047.github.io/" target="_blank">Junnan Li</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="#" target="_blank">Amartya Ganguly</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="#" target="_blank">Sami Haddadin</a><sup>2</sup>
+              </span>
             </div>
 
-           
+            <!-- 添加机构信息 -->
+            <div class="is-size-6 publication-institutions">
+              <div class="institution-block">
+                <sup>1</sup>Munich Institute of Robotics and Machine Intelligence and the Chair of Robotics Science and Systems Intelligence, Technical University of Munich.<br>
+                Email: <a href="mailto:lingyun.chen@tum.de">lingyun.chen@tum.de</a>, 
+                <a href="mailto:siqi.yuan@tum.de">siqi.yuan@tum.de</a>, 
+                <a href="mailto:junnan.li@tum.de">junnan.li@tum.de</a>, 
+                <a href="mailto:amartya.ganguly@tum.de">amartya.ganguly@tum.de</a>
+              </div>
+              <div class="institution-block">
+                <sup>2</sup>Mohamed Bin Zayed University of Artificial Intelligence
+              </div>
+            </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
@@ -574,10 +597,6 @@
 </section>
 <!-- End Target 21 GIF Section -->
 
-
-
-
-
 <!-- Code Section -->
 <section class="hero is-small">
   <div class="hero-body">
@@ -590,28 +609,6 @@
   </div>
 </section>
 <!-- End Code Section -->
-
-    
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{chen2024optimization,
-  title={Optimization-Based Motion Synthesis for Unified Manipulation in Robot Hand-Arm Systems with Bowden Cable Transmission},
-  author={Chen, Lingyun and Yuan, Siqi and Li, Junnan},
-  journal={IFAC Conference},
-  year={2024},
-  url={https://siqi047.github.io/Unified_robot_bowden_cable/}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
 
   <footer class="footer">
   <div class="container">
@@ -661,24 +658,6 @@
       }, 2000);
     }).catch(function(err) {
       console.error('Failed to copy code: ', err);
-    });
-  }
-  
-  // 复制BibTeX功能
-  function copyBibTeX() {
-    const bibtexElement = document.getElementById('bibtex-code');
-    const bibtexText = bibtexElement.textContent;
-    
-    navigator.clipboard.writeText(bibtexText).then(function() {
-      const copyButton = document.querySelector('.copy-bibtex-btn .copy-text');
-      const originalText = copyButton.textContent;
-      copyButton.textContent = 'Copied!';
-      
-      setTimeout(function() {
-        copyButton.textContent = originalText;
-      }, 2000);
-    }).catch(function(err) {
-      console.error('Failed to copy BibTeX: ', err);
     });
   }
 </script>
