@@ -44,7 +44,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   
- <!-- Preconnect for performance -->
+  <!-- Preconnect for performance -->
   <!--
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,8 +54,6 @@
   -->
 
   <title>Optimization-Based Motion Synthesis for Unified Manipulation in Robot Hand-Arm Systems with Bowden Cable Transmission - TUM</title>
-  
-
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -87,7 +85,6 @@
   <script defer src="static/js/index.js"></script>
   
   <!-- Structured Data for Academic Papers -->
-  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -143,9 +140,8 @@
     },
     "url": "https://siqi047.github.io/Unified_robot_bowden_cable/",
     "image": "https://siqi047.github.io/Unified_robot_bowden_cable/static/images/social_preview.png",
-    "keywords": ["robotics", "motion optimization", "hand-arm systems", "Bowden cable", "nonlinear control"],
-    "abstract": "Unified hand–arm robot systems present ongoing challenges, especially when applying tendon-driven five-finger systems using Bowden cables. We address optimization-based motion synthesis for hand–arm robot systems by modeling and optimizing a single Bowden-cable transmission mounted on a Franka Emika Panda arm and its end effector. The shape of the Bowden cable, which varies with the robot arm's configuration, influences the characteristics of force transmission and thereby affects the grasping force. Our trajectory optimization proposes a nonlinear optimization framework to minimize the force change of a Bowden cable while ensuring robot arm trajectory tracking. Although we instantiated this project with a single cable, the formulation generalizes to unified hand-arm robot control, where a multi-tendon-driven, multi-finger hand is actuated via Bowden transmissions. The results provide an optimization foundation for more dexterous hand-arm systems, as well as coordinated manipulation with optimization-based design of unified hand–arm robotic systems.",
-    "citation": "@article{chen2024optimization,\n  title={Optimization-Based Motion Synthesis for Unified Manipulation in Robot Hand-Arm Systems with Bowden Cable Transmission},\n  author={Chen, Lingyun and Yuan, Siqi and Li, Junnan and Ganguly, Amartya and Haddadin, Sami},\n  journal={IFAC Conference},\n  year={2024},\n  url={https://siqi047.github.io/Unified_robot_bowden_cable/}\n}",
+    "keywords": ["Task and motion planning", "Robotic grasping and manipulation", "Mechatronic system modelling, design, optimization"],
+    "abstract": "Unified hand–arm robot systems face critical challenges in reliable force transmission, particularly when tendon-driven dexterous hands are actuated via Bowden cables. The remote actuation introduces nonlinear friction, hysteresis, and force loss along the transmission path, which compromise coordinated control between the hand and arm. To mitigate these effects, we propose a nonlinear optimization-based motion synthesis framework that minimizes Bowden cable force variation while maintaining precise end-effector tracking. The framework incorporates multiple objectives, including end-effector pose matching, motion smoothness (penalizing velocity, acceleration, and jerk), kinematic singularity avoidance, joint torque minimization, and Bowden cable bending minimization. We evaluated this motion synthesis framework on a single-cable setup as a representative of a multi-tendon, multi-fingered hand-arm system, demonstrating effective reduction of cable force fluctuations and accurate trajectory tracking.",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -184,6 +180,7 @@
     /* 设置全局字体为 Times New Roman */
     body {
       font-family: "Times New Roman", Times, serif !important;
+      line-height: 1.6;
     }
     
     /* 标题字体设置 */
@@ -202,6 +199,7 @@
       font-family: 'Courier New', monospace !important;
     }
 
+    /* 图片和内容布局 */
     .image-left-content-right {
       display: flex;
       align-items: center;
@@ -218,7 +216,6 @@
       flex: 1;
     }
     
-    
     @media (max-width: 768px) {
       .image-left-content-right {
         flex-direction: column;
@@ -231,11 +228,13 @@
       }
     }
    
-    .digest-figure img{
+    /* 图片尺寸控制 */
+    .digest-figure img {
       max-width: 300px;
       width: 100%;
       height: auto;
     }
+    
     .trajectory-figure img,
     .force-figure img {
       max-width: 1000px;
@@ -370,6 +369,33 @@
       font-size: 0.7em;
       vertical-align: super;
     }
+    
+    /* 改进的间距和视觉层次 */
+    .hero-body {
+      padding: 3rem 1.5rem;
+    }
+    
+    .section {
+      padding: 3rem 1.5rem;
+    }
+    
+    .publication-title {
+      margin-bottom: 1.5rem;
+    }
+    
+    .publication-authors {
+      margin-bottom: 1rem;
+    }
+    
+    /* 链接样式 */
+    a {
+      color: #2563eb;
+      transition: color 0.3s;
+    }
+    
+    a:hover {
+      color: #1d4ed8;
+    }
   </style>
 </head>
 <body>
@@ -380,312 +406,258 @@
   </button>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Optimization-Based Motion Synthesis for Unified Manipulation in Robot Hand-Arm Systems with Bowden Cable Transmission</h1>
-            
-            <!-- 更新作者信息 -->
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://siqi047.github.io/" target="_blank">Lingyun Chen</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://siqi047.github.io/" target="_blank">Siqi Yuan</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://siqi047.github.io/" target="_blank">Junnan Li</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="#" target="_blank">Amartya Ganguly</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="#" target="_blank">Sami Haddadin</a><sup>2</sup>
-              </span>
-            </div>
-
-            <!-- 添加机构信息 -->
-            <div class="is-size-6 publication-institutions">
-              <div class="institution-block">
-                <sup>1</sup>Munich Institute of Robotics and Machine Intelligence and the Chair of Robotics Science and Systems Intelligence, Technical University of Munich.<br>
-                Email: <a href="mailto:lingyun.chen@tum.de">lingyun.chen@tum.de</a>, 
-                <a href="mailto:siqi.yuan@tum.de">siqi.yuan@tum.de</a>, 
-                <a href="mailto:junnan.li@tum.de">junnan.li@tum.de</a>, 
-                <a href="mailto:amartya.ganguly@tum.de">amartya.ganguly@tum.de</a>
-              </div>
-              <div class="institution-block">
-                <sup>2</sup>Mohamed Bin Zayed University of Artificial Intelligence
-              </div>
-            </div>
-
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
             <div class="column has-text-centered">
-              <div class="publication-links">
-                <span class="link-block">
-                  <a href="static/pdfs/paper.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-
-              <span class="link-block">
-                <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fas fa-file-pdf"></i>
+              <h1 class="title is-1 publication-title">Optimization-Based Motion Synthesis for Unified Manipulation in Robot Hand-Arm Systems with Bowden Cable Transmission</h1>
+              
+              <!-- 更新作者信息 -->
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://siqi047.github.io/" target="_blank" rel="noopener">Lingyun Chen</a><sup>1</sup>,
                 </span>
-                <span>Supplementary</span>
-              </a>
-            </span>
+                <span class="author-block">
+                  <a href="https://siqi047.github.io/" target="_blank" rel="noopener">Siqi Yuan</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://siqi047.github.io/" target="_blank" rel="noopener">Junnan Li</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="#" target="_blank" rel="noopener">Amartya Ganguly</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="#" target="_blank" rel="noopener">Sami Haddadin</a><sup>2</sup>
+                </span>
+              </div>
 
-            <span class="link-block">
-              <a href="https://github.com/siqi047/Unified_robot_bowden_cable" target="_blank"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fab fa-github"></i>
-              </span>
-              <span>Code</span>
-            </a>
-          </span>
-
-          <span class="link-block">
-            <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank"
-            class="external-link button is-normal is-rounded is-dark">
-            <span class="icon">
-              <i class="ai ai-arxiv"></i>
-            </span>
-            <span>arXiv</span>
-          </a>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Unified hand–arm robot systems present ongoing challenges, especially when applying tendon-driven five-finger systems using Bowden cables. We address optimization-based motion synthesis for hand–arm robot systems by modeling and optimizing a single Bowden-cable transmission mounted on a Franka Emika Panda arm and its end effector. The shape of the Bowden cable, which varies with the robot arm's configuration, influences the characteristics of force transmission and thereby affects the grasping force. Our trajectory optimization proposes a nonlinear optimization framework to minimize the force change of a Bowden cable while ensuring robot arm trajectory tracking. Although we instantiated this project with a single cable, the formulation generalizes to unified hand-arm robot control, where a multi-tendon-driven, multi-finger hand is actuated via Bowden transmissions. The results provide an optimization foundation for more dexterous hand-arm systems, as well as coordinated manipulation with optimization-based design of unified hand–arm robotic systems.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- Digest Picture -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Unified hand-arm Robot System Overview</h2>
-      <div class="image-left-content-right">
-        <div class="image-container">
-          <div class="digest-figure">
-            <img src="static/png/Digest_picture.png" alt="Unified robot hand-arm system overview" loading="lazy">
-          </div>
-        </div>
-        <div class="content-container">
-          <div class="content">
-            <p class="has-text-justified">
-              The complete unified hand-arm robot system integrates a Franka Panda arm, and a hand with Bowden cable transmission, 
-              showcasing the mechanical design and force transmission architecture that enables dexterous manipulation.
-            </p>
+              <!-- 添加机构信息 -->
+              <div class="is-size-6 publication-institutions">
+                <div class="institution-block">
+                  <sup>1</sup>Munich Institute of Robotics and Machine Intelligence and the Chair of Robotics Science and Systems Intelligence, Technical University of Munich.<br>
+                  Email: <a href="mailto:lingyun.chen@tum.de">lingyun.chen@tum.de</a>, 
+                  <a href="mailto:siqi.yuan@tum.de">siqi.yuan@tum.de</a>, 
+                  <a href="mailto:junnan.li@tum.de">junnan.li@tum.de</a>, 
+                  <a href="mailto:amartya.ganguly@tum.de">amartya.ganguly@tum.de</a>
+                </div>
+                <div class="institution-block">
+                  <sup>2</sup>Mohamed Bin Zayed University of Artificial Intelligence
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End Digest Picture -->
-    
-<!-- YouTube Video Section -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Video Demonstration</h2>
-      <div class="content has-text-centered">
-        <p class="has-text-justified">
-          This video demonstrates the optimization-based motion synthesis for unified manipulation in robot hand-arm systems with Bowden cable transmission. 
-        </p>
+    </section>
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Unified hand–arm robot systems present ongoing challenges, especially when applying tendon-driven five-finger systems using Bowden cables. We address optimization-based motion synthesis for hand–arm robot systems by modeling and optimizing a single Bowden-cable transmission mounted on a Franka Emika Panda arm and its end effector. The shape of the Bowden cable, which varies with the robot arm's configuration, influences the characteristics of force transmission and thereby affects the grasping force. Our trajectory optimization proposes a nonlinear optimization framework to minimize the force change of a Bowden cable while ensuring robot arm trajectory tracking. Although we instantiated this project with a single cable, the formulation generalizes to unified hand-arm robot control, where a multi-tendon-driven, multi-finger hand is actuated via Bowden transmissions. The results provide an optimization foundation for more dexterous hand-arm systems, as well as coordinated manipulation with optimization-based design of unified hand–arm robotic systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <!-- Digest Picture -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Unified hand-arm Robot System Overview</h2>
+          <div class="image-left-content-right">
+            <div class="image-container">
+              <div class="digest-figure">
+                <img src="static/png/Digest_picture.png" alt="Unified robot hand-arm system overview" loading="lazy">
+              </div>
+            </div>
+            <div class="content-container">
+              <div class="content">
+                <p class="has-text-justified">
+                  The complete unified hand-arm robot system integrates a Franka Panda arm, and a hand with Bowden cable transmission, 
+                  showcasing the mechanical design and force transmission architecture that enables dexterous manipulation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Digest Picture -->
         
-        <!-- YouTube视频嵌入 -->
-        <div class="youtube-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-          <iframe 
-            src="https://www.youtube.com/embed/LveNEDL4EGo" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End YouTube Video Section -->
-
-    
-
-<!-- Results Section -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Results</h2>
-      
-      <!-- Trajectory Analysis -->
-      <div class="image-top-content-bottom" style="margin-bottom: 3rem;">
-        <div class="image-container">
-          <div class="trajectory-figure">
-            <img src="static/png/10_traj.png" alt="Comparison of 10 generated, optimized, and executed trajectories" loading="lazy">
-          </div>
-        </div>
-        <div class="content-container">
-          <div class="content">
-            <h3 class="title is-4">Trajectory Analysis</h3>
+    <!-- YouTube Video Section -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Video Demonstration</h2>
+          <div class="content has-text-centered">
             <p class="has-text-justified">
-              We generated 10 different trajectories and optimized them using our nonlinear optimization framework. The figure below shows the comparison between generated trajectories, optimized trajectories, and the actual trajectories executed by the Franka robot.
-            </p>
-            <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem;">
-              Comparison of 10 generated trajectories, optimized trajectories, and executed trajectories by the Franka robot. 
-              Our optimization framework successfully reduces force fluctuations while maintaining the accuracy of trajectory tracking.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Force Analysis -->
-      <div class="image-top-content-bottom">
-        <div class="image-container">
-          <div class="force-figure">
-            <img src="static/png/force_all.png" alt="Force transmission analysis across 10 trajectories" loading="lazy">
-          </div>
-        </div>
-        <div class="content-container">
-          <div class="content">
-            <h3 class="title is-4">Force Transmission Analysis</h3>
-            <p class="has-text-justified">
-              This figure presents the comprehensive force transmission analysis across 10 optimized trajectories. The force data demonstrates how our optimization framework effectively minimizes force fluctuations in the Bowden cable system while maintaining precise trajectory tracking performance.
-            </p>
-            <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem;">
-              Force transmission characteristics across 10 trajectories, showing the effectiveness of our optimization approach in stabilizing cable forces during complex manipulation tasks. The results validate our nonlinear optimization framework's ability to maintain consistent force transmission regardless of arm configuration changes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Results Section -->
-
-<!-- Target 21 GIF Section -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Optimized Trajectory Visualization</h2>
-      <div class="image-left-content-right">
-        <div class="image-container">
-          <div class="gif-figure">
-            <img src="static/video/target_21.gif" alt=" Optimized execution on Franka robot system" loading="lazy">
-          </div>
-        </div>
-        <div class="content-container">
-          <div class="content">
-            <p class="has-text-justified">
-              The animation below demonstrates the optimized trajectory execution on the Franka robot system. This visualization shows the coordinated motion of the robotic arm while maintaining stable force transmission through the Bowden cable system.
+              This video demonstrates the optimization-based motion synthesis for unified manipulation in robot hand-arm systems with Bowden cable transmission. 
             </p>
             
+            <!-- YouTube视频嵌入 -->
+            <div class="youtube-container">
+              <iframe 
+                src="https://www.youtube.com/embed/LveNEDL4EGo" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End Target 21 GIF Section -->
+    </section>
+    <!-- End YouTube Video Section -->
 
-<!-- Code Section -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Implementation Code</h2>
-      <div class="content has-text-centered">
-        <p class="is-size-5">Code will be provided later</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Code Section -->
+    <!-- Results Section -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Results</h2>
+          
+          <!-- Trajectory Analysis -->
+          <div class="image-top-content-bottom" style="margin-bottom: 3rem;">
+            <div class="image-container">
+              <div class="trajectory-figure">
+                <img src="static/png/10_traj.png" alt="Comparison of 10 generated, optimized, and executed trajectories" loading="lazy">
+              </div>
+            </div>
+            <div class="content-container">
+              <div class="content">
+                <h3 class="title is-4">Trajectory Analysis</h3>
+                <p class="has-text-justified">
+                  We generated 10 different trajectories and optimized them using our nonlinear optimization framework. The figure below shows the comparison between generated trajectories, optimized trajectories, and the actual trajectories executed by the Franka robot.
+                </p>
+                <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem;">
+                  Comparison of 10 generated trajectories, optimized trajectories, and executed trajectories by the Franka robot. 
+                  Our optimization framework successfully reduces force fluctuations while maintaining the accuracy of trajectory tracking.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+          <!-- Force Analysis -->
+          <div class="image-top-content-bottom">
+            <div class="image-container">
+              <div class="force-figure">
+                <img src="static/png/force_all.png" alt="Force transmission analysis across 10 trajectories" loading="lazy">
+              </div>
+            </div>
+            <div class="content-container">
+              <div class="content">
+                <h3 class="title is-4">Force Transmission Analysis</h3>
+                <p class="has-text-justified">
+                  This figure presents the comprehensive force transmission analysis across 10 optimized trajectories. The force data demonstrates how our optimization framework effectively minimizes force fluctuations in the Bowden cable system while maintaining precise trajectory tracking performance.
+                </p>
+                <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem;">
+                  Force transmission characteristics across 10 trajectories, showing the effectiveness of our optimization approach in stabilizing cable forces during complex manipulation tasks. The results validate our nonlinear optimization framework's ability to maintain consistent force transmission regardless of arm configuration changes.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
+    <!-- End Results Section -->
 
-<!-- JavaScript for interactive elements -->
-<script>
-  // 滚动到顶部功能
-  function scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }
-  
-  // 显示/隐藏滚动到顶部按钮
-  window.addEventListener('scroll', function() {
-    const scrollButton = document.querySelector('.scroll-to-top');
-    if (window.pageYOffset > 300) {
-      scrollButton.style.display = 'block';
-    } else {
-      scrollButton.style.display = 'none';
+    <!-- Target 21 GIF Section -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Optimized Trajectory Visualization</h2>
+          <div class="image-left-content-right">
+            <div class="image-container">
+              <div class="gif-figure">
+                <img src="static/video/target_21.gif" alt="Optimized execution on Franka robot system" loading="lazy">
+              </div>
+            </div>
+            <div class="content-container">
+              <div class="content">
+                <p class="has-text-justified">
+                  The animation below demonstrates the optimized trajectory execution on the Franka robot system. This visualization shows the coordinated motion of the robotic arm while maintaining stable force transmission through the Bowden cable system.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Target 21 GIF Section -->
+
+    <!-- Code Section -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Implementation Code</h2>
+          <div class="content has-text-centered">
+            <p class="is-size-5">Code will be provided later</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Code Section -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+                You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- JavaScript for interactive elements -->
+  <script>
+    // 滚动到顶部功能
+    function scrollToTop() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
     }
-  });
-  
-  // 复制代码功能
-  function copyCode() {
-    const codeElement = document.querySelector('.code-block code');
-    const codeText = codeElement.textContent;
     
-    navigator.clipboard.writeText(codeText).then(function() {
-      const copyButton = document.querySelector('.copy-code-btn .copy-text');
-      const originalText = copyButton.textContent;
-      copyButton.textContent = 'Copied!';
-      
-      setTimeout(function() {
-        copyButton.textContent = originalText;
-      }, 2000);
-    }).catch(function(err) {
-      console.error('Failed to copy code: ', err);
+    // 显示/隐藏滚动到顶部按钮
+    window.addEventListener('scroll', function() {
+      const scrollButton = document.querySelector('.scroll-to-top');
+      if (window.pageYOffset > 300) {
+        scrollButton.style.display = 'block';
+      } else {
+        scrollButton.style.display = 'none';
+      }
     });
-  }
-</script>
-
-<!-- Statcounter tracking code -->
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-<!-- End of Statcounter Code -->
-
-  </body>
+    
+    // 复制代码功能
+    function copyCode() {
+      const codeElement = document.querySelector('.code-block code');
+      const codeText = codeElement.textContent;
+      
+      navigator.clipboard.writeText(codeText).then(function() {
+        const copyButton = document.querySelector('.copy-code-btn .copy-text');
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        
+        setTimeout(function() {
+          copyButton.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Failed to copy code: ', err);
+      });
+    }
+  </script>
+</body>
 </html>
