@@ -230,15 +230,15 @@
    
     /* 图片尺寸控制 */
     .digest-figure img {
-      max-width: 600px;
-      width: 150%;
+      max-width: 400px;
+      width: 100%;
       height: auto;
     }
     
     /* 实验设置图片尺寸控制 - 缩小到100px */
     .setup_hand_arm img {
-      max-width: 80px;
-      width: 80%;
+      max-width: 60px;
+      width: 60%;
       height: auto;
     }
     
@@ -470,6 +470,30 @@
     .centered-gif .gif-figure {
       text-align: center;
     }
+
+    /* Keywords 样式 */
+    .keywords-section {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e0e0e0;
+    }
+    
+    .keywords-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .keyword-tag {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -533,6 +557,20 @@
               <p>
                 Unified hand–arm robot systems present ongoing challenges, especially when applying tendon-driven five-finger systems using Bowden cables. We address optimization-based motion synthesis for hand–arm robot systems by modeling and optimizing a single Bowden-cable transmission mounted on a Franka Emika Panda arm and its end effector. The shape of the Bowden cable, which varies with the robot arm's configuration, influences the characteristics of force transmission and thereby affects the grasping force. Our trajectory optimization proposes a nonlinear optimization framework to minimize the force change of a Bowden cable while ensuring robot arm trajectory tracking. Although we instantiated this project with a single cable, the formulation generalizes to unified hand-arm robot control, where a multi-tendon-driven, multi-finger hand is actuated via Bowden transmissions. The results provide an optimization foundation for more dexterous hand-arm systems, as well as coordinated manipulation with optimization-based design of unified hand–arm robotic systems.
               </p>
+            </div>
+
+            <!-- Keywords Section -->
+            <div class="keywords-section">
+              <h2 class="title is-4">Keywords</h2>
+              <div class="keywords-tags">
+                <span class="keyword-tag">Robotics</span>
+                <span class="keyword-tag">Motion Optimization</span>
+                <span class="keyword-tag">Hand-Arm Systems</span>
+                <span class="keyword-tag">Bowden Cable</span>
+                <span class="keyword-tag">Trajectory Planning</span>
+                <span class="keyword-tag">Force Transmission</span>
+                <span class="keyword-tag">Nonlinear Control</span>
+              </div>
             </div>
           </div>
         </div>
