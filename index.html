@@ -230,14 +230,14 @@
    
     /* 图片尺寸控制 */
     .digest-figure img {
-      max-width: 400px;
+      max-width: 500px;
       width: 100%;
       height: auto;
     }
     
-    /* 实验设置图片尺寸控制 - 缩小到200px */
+    /* 实验设置图片尺寸控制 - 缩小到100px */
     .setup_hand_arm img {
-      max-width: 200px;
+      max-width: 100px;
       width: 100%;
       height: auto;
     }
@@ -448,7 +448,7 @@
     
     /* 实验设置图片特定样式 - 缩小尺寸 */
     .setup-image-container {
-      max-width: 200px; /* 进一步缩小到200px */
+      max-width: 200px;
       width: 100%;
     }
     
@@ -627,40 +627,34 @@
           
           <!-- Trajectory Analysis -->
           <div class="image-top-content-bottom" style="margin-bottom: 3rem;">
-            <div class="image-container">
-              <div class="trajectory-figure">
-                <img src="static/png/10_traj.png" alt="Comparison of 10 generated, optimized, and executed trajectories" loading="lazy">
-              </div>
-            </div>
             <div class="content-container">
               <div class="content">
                 <h3 class="title is-4">Trajectory Analysis</h3>
                 <p class="has-text-justified">
                  An illustration of the ten tested trajectories of the robot EE, together with the optimized ones and experimentally executed ones using computed control inputs.
                 </p>
-                <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem;">
-                 
-                </p>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="trajectory-figure">
+                <img src="static/png/10_traj.png" alt="Comparison of 10 generated, optimized, and executed trajectories" loading="lazy">
               </div>
             </div>
           </div>
 
           <!-- Force Analysis -->
           <div class="image-top-content-bottom">
-            <div class="image-container">
-              <div class="force-figure">
-                <img src="static/png/force_all.png" alt="Force transmission analysis across 10 trajectories" loading="lazy">
-              </div>
-            </div>
             <div class="content-container">
               <div class="content">
                 <h3 class="title is-4">Force Transmission Analysis</h3>
                 <p class="has-text-justified">
-    
+                  Analysis of force transmission across 10 trajectories showing the effectiveness of the optimization framework.
                 </p>
-                <p class="has-text-justified" style="margin-top: 1rem; font-size: 0.9rem;">
-  
-                </p>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="force-figure">
+                <img src="static/png/force_all.png" alt="Force transmission analysis across 10 trajectories" loading="lazy">
               </div>
             </div>
           </div>
@@ -677,11 +671,14 @@
           <div class="centered-gif">
             <div class="gif-figure">
               <img src="static/video/target_21.gif" alt="Optimized execution on Franka robot system" loading="lazy">
+              <p class="has-text-justified">
+                 x1.5 speed
+              </p>
             </div>
           </div>
           <div class="content has-text-centered" style="margin-top: 1.5rem;">
             <p class="has-text-justified">
-              <!-- 这里可以添加描述文本 -->
+              Visualization of the optimized trajectory execution on the Franka robot system at 1.5x speed.
             </p>
           </div>
         </div>
