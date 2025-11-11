@@ -230,7 +230,7 @@
    
     /* 图片尺寸控制 */
     .digest-figure img {
-      max-width: 300px;
+      max-width: 400px;
       width: 100%;
       height: auto;
     }
@@ -405,6 +405,26 @@
       font-family: 'Courier New', monospace;
       font-size: 0.9em;
     }
+    
+    /* 实验设置样式 */
+    .setup-container {
+      margin-top: 2rem;
+    }
+    
+    .setup-image {
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .setup-caption {
+      text-align: center;
+      margin-top: 1rem;
+      font-style: italic;
+      color: #666;
+    }
   </style>
 </head>
 <body>
@@ -491,6 +511,19 @@
                 <p class="has-text-justified">
                   The complete unified hand-arm robot system integrates a Franka Panda arm, and a hand with Bowden cable transmission, 
                   showcasing the mechanical design and force transmission architecture that enables dexterous manipulation.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 实验设置部分 -->
+          <div class="setup-container">
+            <div class="image-top-content-bottom">
+              <div class="image-container">
+                <img src="static/png/Digest_picture.png" alt="Experimental setup of the robot hand-arm system" class="setup-image" loading="lazy">
+                <p class="setup-caption">
+                  The complete experimental setup, illustrating the 7-DOF Franka Emika robot and associated hardware. 
+                  (a) Flexible holder system; (b) Force measurement unit; (c) Encased Bowden cable; (d) Motor for Bowden cable tension control.
                 </p>
               </div>
             </div>
