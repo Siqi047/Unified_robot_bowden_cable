@@ -471,28 +471,18 @@
       text-align: center;
     }
 
-    /* Keywords 样式 */
+    /* Keywords 样式 - 纯文字无框 */
     .keywords-section {
       margin-top: 2rem;
       padding-top: 1.5rem;
       border-top: 1px solid #e0e0e0;
     }
     
-    .keywords-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-    
-    .keyword-tag {
-      background-color: #2563eb;
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
+    .keywords-text {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
     }
   </style>
 </head>
@@ -559,17 +549,11 @@
               </p>
             </div>
 
-            <!-- Keywords Section -->
+            <!-- Keywords Section - 纯文字无框 -->
             <div class="keywords-section">
               <h2 class="title is-4">Keywords</h2>
-              <div class="keywords-tags">
-                <span class="keyword-tag">Robotics</span>
-                <span class="keyword-tag">Motion Optimization</span>
-                <span class="keyword-tag">Hand-Arm Systems</span>
-                <span class="keyword-tag">Bowden Cable</span>
-                <span class="keyword-tag">Trajectory Planning</span>
-                <span class="keyword-tag">Force Transmission</span>
-                <span class="keyword-tag">Nonlinear Control</span>
+              <div class="keywords-text">
+                Robotics, Motion Optimization, Hand-Arm Systems, Bowden Cable, Trajectory Planning, Force Transmission, Nonlinear Control
               </div>
             </div>
           </div>
