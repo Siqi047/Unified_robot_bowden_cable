@@ -235,6 +235,13 @@
       height: auto;
     }
     
+    /* 实验设置图片尺寸控制 - 缩小到200px */
+    .setup_hand_arm img {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+    }
+    
     .trajectory-figure img,
     .force-figure img {
       max-width: 1000px;
@@ -441,7 +448,7 @@
     
     /* 实验设置图片特定样式 - 缩小尺寸 */
     .setup-image-container {
-      max-width: 400px; /* 从500px缩小到400px */
+      max-width: 200px; /* 进一步缩小到200px */
       width: 100%;
     }
     
@@ -558,7 +565,9 @@
           <div class="setup-container">
             <div class="image-left-content-right">
               <div class="image-container setup-image-container">
-                <img src="static/png/setup_hand_arm.png" alt="Experimental setup of the robot hand-arm system" class="setup-image" loading="lazy">
+                <div class="setup_hand_arm">
+                  <img src="static/png/setup_hand_arm.png" alt="Experimental setup of the robot hand-arm system" class="setup-image" loading="lazy">
+                </div>
               </div>
               <div class="content-container">
                 <div class="content">
