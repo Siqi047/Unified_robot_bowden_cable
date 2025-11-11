@@ -387,14 +387,23 @@
       margin-bottom: 1rem;
     }
     
-    /* 链接样式 */
-    a {
-      color: #2563eb;
-      transition: color 0.3s;
+    /* 移除超链接样式 */
+    .publication-authors a,
+    .publication-institutions a {
+      color: inherit !important;
+      text-decoration: none !important;
     }
     
-    a:hover {
-      color: #1d4ed8;
+    .publication-authors a:hover,
+    .publication-institutions a:hover {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    
+    /* 邮箱样式 */
+    .email-address {
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -416,33 +425,31 @@
               <!-- 更新作者信息 -->
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="https://siqi047.github.io/" target="_blank" rel="noopener">Lingyun Chen</a><sup>1</sup>,
+                  Lingyun Chen<sup>1,2</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://siqi047.github.io/" target="_blank" rel="noopener">Siqi Yuan</a><sup>1</sup>,
+                  Siqi Yuan<sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://siqi047.github.io/" target="_blank" rel="noopener">Junnan Li</a><sup>1</sup>,
+                  Junnan Li<sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="#" target="_blank" rel="noopener">Amartya Ganguly</a><sup>1</sup>,
+                  Amartya Ganguly<sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="#" target="_blank" rel="noopener">Sami Haddadin</a><sup>2</sup>
+                  Sami Haddadin<sup>2</sup>
                 </span>
               </div>
 
               <!-- 添加机构信息 -->
               <div class="is-size-6 publication-institutions">
                 <div class="institution-block">
-                  <sup>1</sup>Munich Institute of Robotics and Machine Intelligence and the Chair of Robotics Science and Systems Intelligence, Technical University of Munich.<br>
-                  Email: <a href="mailto:lingyun.chen@tum.de">lingyun.chen@tum.de</a>, 
-                  <a href="mailto:siqi.yuan@tum.de">siqi.yuan@tum.de</a>, 
-                  <a href="mailto:junnan.li@tum.de">junnan.li@tum.de</a>, 
-                  <a href="mailto:amartya.ganguly@tum.de">amartya.ganguly@tum.de</a>
+                  <sup>1</sup>Munich Institute of Robotics and Machine Intelligence and the Chair of Robotics and Systems Intelligence, Technical University of Munich.<br>
+                  Email: <span class="email-address">{lingyun.chen, siqi.yuan, junnan.li, amartya.ganguly}@tum.de</span>
                 </div>
                 <div class="institution-block">
-                  <sup>2</sup>Mohamed Bin Zayed University of Artificial Intelligence
+                  <sup>2</sup>Mohamed Bin Zayed University of Artificial Intelligence.<br>
+                  Email: <span class="email-address">sami.haddadin@mbzuai.ac.ae</span>
                 </div>
               </div>
             </div>
