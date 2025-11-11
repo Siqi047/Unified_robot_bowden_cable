@@ -545,15 +545,17 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                Unified hand–arm robot systems present ongoing challenges, especially when applying tendon-driven five-finger systems using Bowden cables. We address optimization-based motion synthesis for hand–arm robot systems by modeling and optimizing a single Bowden-cable transmission mounted on a Franka Emika Panda arm and its end effector. The shape of the Bowden cable, which varies with the robot arm's configuration, influences the characteristics of force transmission and thereby affects the grasping force. Our trajectory optimization proposes a nonlinear optimization framework to minimize the force change of a Bowden cable while ensuring robot arm trajectory tracking. Although we instantiated this project with a single cable, the formulation generalizes to unified hand-arm robot control, where a multi-tendon-driven, multi-finger hand is actuated via Bowden transmissions. The results provide an optimization foundation for more dexterous hand-arm systems, as well as coordinated manipulation with optimization-based design of unified hand–arm robotic systems.
+              Unified hand–arm robot systems face critical challenges in reliable force transmission, particularly when tendon-driven dexterous hands are actuated via Bowden cables. The remote actuation introduces nonlinear friction, hysteresis, and force loss along the transmission path, which compromise coordinated control between the hand and arm. To mitigate these effects, we propose a nonlinear optimization-based motion synthesis framework that minimizes Bowden cable force variation while maintaining precise end-effector tracking. 
+The framework incorporates multiple objectives, including end-effector pose matching, motion smoothness (penalizing velocity, acceleration, and jerk), kinematic singularity avoidance, joint torque minimization, and Bowden cable bending minimization.
+We evaluated this motion synthesis framework on a single-cable setup as a representative of a multi-tendon, multi-fingered hand-arm system, demonstrating effective reduction of cable force fluctuations and accurate trajectory tracking.  
               </p>
             </div>
 
             <!-- Keywords Section - 纯文字无框 -->
             <div class="keywords-section">
-              <h2 class="title is-4">Keywords</h2>
+             
               <div class="keywords-text">
-                Robotics, Motion Optimization, Hand-Arm Systems, Bowden Cable, Trajectory Planning, Force Transmission, Nonlinear Control
+                keywords: Task and motion planning, Robotic grasping and manipulation, Mechatronic system modelling, design, optimization
               </div>
             </div>
           </div>
