@@ -412,18 +412,31 @@
     }
     
     .setup-image {
-      max-width: 600px;
+      max-width: 100%;
       width: 100%;
       height: auto;
-      margin: 0 auto;
-      display: block;
     }
     
     .setup-caption {
-      text-align: center;
       margin-top: 1rem;
       font-style: italic;
       color: #666;
+      text-align: left;
+    }
+    
+    /* 组件标签样式 */
+    .component-tags {
+      margin-top: 1rem;
+    }
+    
+    .component-tag {
+      display: inline-block;
+      background-color: #f0f0f0;
+      padding: 0.3rem 0.6rem;
+      margin: 0.2rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #333;
     }
   </style>
 </head>
@@ -516,15 +529,28 @@
             </div>
           </div>
           
-          <!-- 实验设置部分 -->
+          <!-- 实验设置部分 - 修改为左右结构 -->
           <div class="setup-container">
-            <div class="image-top-content-bottom">
+            <div class="image-left-content-right">
               <div class="image-container">
-                <img src="static/png/Digest_picture.png" alt="Experimental setup of the robot hand-arm system" class="setup-image" loading="lazy">
-                <p class="setup-caption">
-                  The complete experimental setup, illustrating the 7-DOF Franka Emika robot and associated hardware. 
-                  (a) Flexible holder system; (b) Force measurement unit; (c) Encased Bowden cable; (d) Motor for Bowden cable tension control.
-                </p>
+                <img src="static/png/setup_hand_arm.png" alt="Experimental setup of the robot hand-arm system" class="setup-image" loading="lazy">
+              </div>
+              <div class="content-container">
+                <div class="content">
+                  <h3 class="title is-4">Experimental Setup</h3>
+                  <p class="has-text-justified">
+                    The complete experimental setup, illustrating the 7-DOF Franka Emika robot and associated hardware components.
+                  </p>
+                  <div class="component-tags">
+                    <span class="component-tag">(a) Flexible holder system</span>
+                    <span class="component-tag">(b) Force measurement unit</span>
+                    <span class="component-tag">(c) Encased Bowden cable</span>
+                    <span class="component-tag">(d) Motor for Bowden cable tension control</span>
+                  </div>
+                  <p class="setup-caption">
+                    This experimental configuration enables precise measurement and control of force transmission through the Bowden cable system during robotic manipulation tasks.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
