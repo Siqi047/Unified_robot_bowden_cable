@@ -439,9 +439,9 @@
       color: #333;
     }
     
-    /* 实验设置图片特定样式 */
+    /* 实验设置图片特定样式 - 缩小尺寸 */
     .setup-image-container {
-      max-width: 500px;
+      max-width: 400px; /* 从500px缩小到400px */
       width: 100%;
     }
     
@@ -450,6 +450,18 @@
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    /* GIF居中显示样式 */
+    .centered-gif {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .centered-gif .gif-figure {
+      text-align: center;
     }
   </style>
 </head>
@@ -648,22 +660,20 @@
     </section>
     <!-- End Results Section -->
 
-    <!-- Target 21 GIF Section -->
+    <!-- Target 21 GIF Section - 修改为居中显示 -->
     <section class="hero is-small">
       <div class="hero-body">
         <div class="container">
-          <h2 class="title is-3">Optimized Trajectory Visualization</h2>
-          <div class="image-left-content-right">
-            <div class="image-container">
-              <div class="gif-figure">
-                <img src="static/video/target_21.gif" alt="Optimized execution on Franka robot system" loading="lazy">
-              </div>
+          <h2 class="title is-3 has-text-centered">Optimized Trajectory Visualization</h2>
+          <div class="centered-gif">
+            <div class="gif-figure">
+              <img src="static/video/target_21.gif" alt="Optimized execution on Franka robot system" loading="lazy">
             </div>
-            <div class="content-container">
-              <div class="content">
-                <p class="has-text-justified">
-              </div>
-            </div>
+          </div>
+          <div class="content has-text-centered" style="margin-top: 1.5rem;">
+            <p class="has-text-justified">
+              <!-- 这里可以添加描述文本 -->
+            </p>
           </div>
         </div>
       </div>
